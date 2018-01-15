@@ -1,0 +1,23 @@
+--- #Terminate Ec2 
+- hosts: localhost
+  connection: local
+  gather_facts: yes
+
+  vars_files:
+    - ../group_vars/ec2id.yml
+    - ../group_vars/aws-cred.yml
+   # - ansible_python_interpreter: '/usr/bin/env python'
+      
+
+  tasks:
+    - name: Ec2 termination
+      local_action:
+        module: ec2
+        key_name: 'jenkins'
+        state: 'absent'
+        region: "{{ aws_region }}"
+        instance_ids: "{{ ec2_id }}"
+        
+
+
+

@@ -1,4 +1,6 @@
---- # Aws creds are stored here
+--- aws creds are stored here
 
-ec2_access_key: xxxx
-ec2_secret_key: xxxx
+aws_access_key: xxxxxx
+aws_secret_key: xxxxxxxxxxxxxxxxx
+aws_region: us-east-1
+ami_id: ami-5e6d3924
