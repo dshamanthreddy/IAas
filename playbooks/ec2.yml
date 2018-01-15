@@ -1,0 +1,19 @@
+---
+-  hosts: localhost
+   connection: local
+   gather_facts: True
+   vars_files:
+          - group_vars/aws-cred.yml
+
+
+
+
+   tasks:
+    key_name: jenkins
+    instance_type: t2.micro
+    image: ami-5e6d3924
+    wait: yes
+    group: Jenkins
+    count: 1
+    vpc_subnet_id: subnet-37509b6d
+    assign_public_ip: yes      
