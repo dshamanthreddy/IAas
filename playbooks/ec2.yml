@@ -17,6 +17,7 @@
          image: "{{ ami_id }}"
          region: "{{ aws_region }}"
          wait: true
+         monitoring: yes
          exact_count: 1
          count_tag:
            Name: Demo
