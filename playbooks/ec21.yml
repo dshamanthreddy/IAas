@@ -29,5 +29,9 @@
         minutes: 2
 
 
+    - name: Wait for SSH to come up on "{{ bob.instances[0]['private_ip'] }}" 
+      wait_for: host="{{ bob.instances[0]['private_ip'] }}" port=22 delay=60 timeout=320 state=started
+
+
 
 

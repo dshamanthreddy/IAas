@@ -1,0 +1,6 @@
+---
+
+aws_access_key: "xxxxxx"
+aws_secret_key: "xxxxxxxxx"
+aws_region: "us-east-1"
+ami_id: ami-5e6d3924
